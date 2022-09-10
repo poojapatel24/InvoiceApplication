@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">InvoiceApplication</string>
+    <string name="title_activity_cart">CartActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="enter_discount_value">Enter Discount Value in Percentage</string>
+    <string name="percentage">Percentage</string>
+    <string name="flat">Flat</string>
+    <string name="amount_received_from_customer">Amount Received from Customer</string>
+    <string name="download">Download</string>
+    <string name="invoice">Invoice</string>
+    <string name="invoice_no_89685">Invoice No:89685</string>
+</resources>

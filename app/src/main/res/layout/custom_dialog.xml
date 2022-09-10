@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <TextView
+        android:id="@+id/customDialogTv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Select Discount Option"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/customDialogTv"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/flat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flat"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/percentage"
+            android:textColor="@color/black" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/flatoptionTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get 10% off"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
+    <EditText
+        android:id="@+id/percentageoptionEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/enter_discount_value"
+        android:inputType="numberDecimal"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
+
+    <LinearLayout
+        android:id="@+id/customlinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentageoptionEt"
+        android:orientation="horizontal">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/customConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/customAmoutTv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/amount_received_from_customer"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/customYesBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:background="@color/light_gray"
+                android:text="Yes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customAmoutTv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/customNoBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginEnd="60dp"
+                android:background="@color/light_gray"
+                android:text="No"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/customYesBtn" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
